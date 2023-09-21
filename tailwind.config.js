@@ -8,6 +8,7 @@ module.exports = {
         secondary: '#150E28',
         tertiary: '#903AFF',
         mirage: '#D434FE',
+        subby: '#18112b',
       },
       backgroundImage: {
         flare: "url('/build/images/Purple-Lens-Flare-PNG.svg')",
