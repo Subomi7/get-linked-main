@@ -19,6 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>getlinked-main</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
   </head>
   <body class="bg-secondary">
     <header class="">
@@ -40,6 +41,7 @@
           <button type="button" class="btn btn-primary w-40">Register</button>
         </ul>
         <div class="relative flex sm:hidden flex-1 justify-end">
+          <a onclick="openMobileMenu()" id="menu-open-button" class="" href="#">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="19"
@@ -51,7 +53,23 @@
               d="M1.35714 0H8.14286C8.50279 0 8.84799 0.1475 9.1025 0.410051C9.35701 0.672601 9.5 1.0287 9.5 1.4C9.5 1.7713 9.35701 2.1274 9.1025 2.38995C8.84799 2.6525 8.50279 2.8 8.14286 2.8H1.35714C0.997206 2.8 0.652012 2.6525 0.397498 2.38995C0.142984 2.1274 0 1.7713 0 1.4C0 1.0287 0.142984 0.672601 0.397498 0.410051C0.652012 0.1475 0.997206 0 1.35714 0ZM10.8571 11.2H17.6429C18.0028 11.2 18.348 11.3475 18.6025 11.6101C18.857 11.8726 19 12.2287 19 12.6C19 12.9713 18.857 13.3274 18.6025 13.5899C18.348 13.8525 18.0028 14 17.6429 14H10.8571C10.4972 14 10.152 13.8525 9.8975 13.5899C9.64298 13.3274 9.5 12.9713 9.5 12.6C9.5 12.2287 9.64298 11.8726 9.8975 11.6101C10.152 11.3475 10.4972 11.2 10.8571 11.2ZM1.35714 5.6H17.6429C18.0028 5.6 18.348 5.7475 18.6025 6.01005C18.857 6.2726 19 6.6287 19 7C19 7.3713 18.857 7.7274 18.6025 7.98995C18.348 8.2525 18.0028 8.4 17.6429 8.4H1.35714C0.997206 8.4 0.652012 8.2525 0.397498 7.98995C0.142984 7.7274 0 7.3713 0 7C0 6.6287 0.142984 6.2726 0.397498 6.01005C0.652012 5.7475 0.997206 5.6 1.35714 5.6Z"
               fill="white"
             />
-          </svg>        
+          </svg>
+        </a>
+        <nav id="offcanvas-menu" style="display: none;" class="fixed bg-secondary h-auto top-0 right-0 md:w-1/3 shadow-md flex-col flex items-center teanslate-x-0">
+          <a id="menu-close-btn" class="absolute top-2 right-4" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            
+          </a>
+          <ul>
+            <li class="my-5"><a class="text-xl font-semibold text-white hover:text-mirage duration-300" href="#">Timeline</a></li>
+            <li class="my-5"><a class="text-xl font-semibold text-white hover:text-mirage duration-300" href="#">Overview</a></li>
+            <li class="my-5"><a class="text-xl font-semibold text-white hover:text-mirage duration-300" href="#">FAQs</a></li>
+            <li class="my-5"><a class="text-xl font-semibold text-white hover:text-mirage duration-300" href="#">Contacts</a></li>
+          </ul>
+          <button type="button" class="btn btn-primary w-40">Register</button>
+        </nav>
         </div>
       </nav>
     </header>
@@ -63,19 +81,19 @@
       <!--  elements-->
       <div class="relative">
         <div class="absolute top-30 left-60">
-          <img src="/build/images/star.svg" />
+          <img src="../build/images/star.svg" />
         </div>
         <div class="absolute top-96 right-1/3 lg:top-96 lg:right-1/2">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
         <div class="absolute top-1/2 right-60">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-36 lg:top-28 lg:left-1/3 left-1/2">
-          <img src="/build/images/light_bulb.svg" />
+          <img src="../build/images/light_bulb.svg" />
         </div>
         <div class="absolute top-28 right-48 lg:top-14 lg:right-96">
-          <img src="/build/images/underline.svg" />
+          <img src="../build/images/underline.svg" />
         </div>
       </div>
 
@@ -120,8 +138,8 @@
                 >
               </h1>
               <div class="flex">
-                <img src="/build/images/chain.svg" />
-                <img src="/build/images/fire_icon.svg" />
+                <img src="../build/images/chain.svg" />
+                <img src="../build/images/fire_icon.svg" />
               </div>
             </div>
             <p
@@ -140,12 +158,12 @@
           <div class="relative flex flex-1 justify-center mb-10 lg:mb-0">
             <img
               class="bg-blend-luminosity lightgray 50% / cover no-repeat"
-              src="/build/images/man_wearing_smart_glasses_touching_virtual_screen 1.svg"
+              src="../build/images/man_wearing_smart_glasses_touching_virtual_screen 1.svg"
               alt=""
             />
             <img
               class="absolute 9.702px -4.782px / 105.862% 104.281% no-repeat"
-              src="/build/images/globe_light.svg"
+              src="../build/images/globe_light.svg"
               alt=""
             />
           </div>
@@ -159,13 +177,13 @@
       <!-- elements -->
       <div class="relative">
         <div class="absolute top-30 left-60">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-96 right-1/3 lg:top-96 lg:right-1/2">
-          <img src="/build/images/arrow.svg" />
+          <img src="../build/images/arrow.svg" />
         </div>
         <div class="absolute top-1/2 right-60">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         </div>
       </div>
@@ -178,7 +196,7 @@
           <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
             <img
               class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
-              src="/build/images/the_big_idea.svg"
+              src="../build/images/the_big_idea.svg"
               alt=""
             />
           </div>
@@ -214,10 +232,10 @@
       <!-- elements -->
       <div class="relative">
         <div class="absolute top-44 left-1/3">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-96 right-1/3 lg:top-96 lg:right-1/2">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
         </div>
       </div>
@@ -252,7 +270,7 @@
           <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
             <img
               class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
-              src="/build/images/woman_sitting_on a_chair.svg"
+              src="../build/images/woman_sitting_on a_chair.svg"
               alt=""
             />
           </div>
@@ -266,13 +284,13 @@
       <!-- elements -->
       <div class="relative">
         <div class="absolute top-64 left-1/3">
-          <img src="/build/images/star.svg" />
+          <img src="../build/images/star.svg" />
         </div>
         <div class="absolute top-96 right-1/3 lg:top-96 lg:right-1/2">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
         <div class="absolute top-1/2 right-60">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute "><i class="fa-sharp fa-light fa-question" style="color: #531464;"></i></div>
       </div>
@@ -285,7 +303,7 @@
           <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
             <img
               class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
-              src="/build/images/man_and_woman.svg"
+              src="../build/images/man_and_woman.svg"
               alt=""
             />
           </div>
@@ -326,19 +344,19 @@
       <!-- elements -->
       <div class="container relative">
         <div class="absolute top-30 left-60">
-          <img src="/build/images/star.svg" />
+          <img src="../build/images/star.svg" />
         </div>
         <div class="absolute top-96 right-1/3 lg:top-96 lg:right-1/2">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
         <div class="absolute top-1/2 right-60">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-36 lg:top-28 lg:left-1/3 left-1/2">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-28 right-48 lg:top-14 lg:right-96">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
         <div class="absolute top-0 right-1/3">
           <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="none" stroke="#d434fe" d="M5 8.5v-1a7 7 0 0 1 14 0a4.83 4.83 0 0 1-1.414 3.414l-2.414 2.414A4 4 0 0 0 14 16.157v.343h-4v-1.172c0-1.81.72-3.547 2-4.828l1.293-1.293A2.414 2.414 0 0 0 14 7.5a2 2 0 1 0-4 0v1H5Zm7 11a2 2 0 1 1 0 4a2 2 0 0 1 0-4Z"/></svg>
@@ -377,7 +395,7 @@
             >
             Can I work on a project I started before the hackathon?
             </p>
-            <img src="/build/images/plus.svg" />
+            <img src="../build/images/plus.svg" />
             </div>
             <div class="flex gap-x-14 border-b border-mirage">
               <p
@@ -385,7 +403,7 @@
             >
             What happens if I need help during the hackathon?
             </p>
-            <img src="/build/images/plus.svg" />
+            <img src="../build/images/plus.svg" />
             </div>
             <div class="flex gap-x-14 border-b border-mirage">
               <p
@@ -393,7 +411,7 @@
             >
             What happens if I don't have an idea for a project?
             </p>
-            <img src="/build/images/plus.svg" />
+            <img src="../build/images/plus.svg" />
             </div>
             <div class="flex gap-x-20 border-b border-mirage">
               <p
@@ -401,28 +419,28 @@
             >
             Can I join a team or do I have to come with one?
             </p>
-            <img src="/build/images/plus.svg" />
+            <img src="../build/images/plus.svg" />
             </div>
             <div class="flex gap-x-28 border-b border-mirage"><p
               class="font-montserrat font-sans text-white text-sm my-4 text-center lg:text-left sm:w-3/4 lg:w-full"
             >
             What happens after the hackathon ends
             </p>
-            <img src="/build/images/plus.svg" /></div>
+            <img src="../build/images/plus.svg" /></div>
             <div class="flex gap-x-8 border-b border-mirage">
               <p
               class="font-montserrat font-sans text-white text-sm my-4 text-center lg:text-left sm:w-3/4 lg:w-full"
             >
             Can I work on a project I started before the hackathon?
             </p>
-            <img src="/build/images/plus.svg" />
+            <img src="../build/images/plus.svg" />
             </div>
           </div>
           <!-- Image -->
           <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
             <img
               class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
-              src="/build/images/man_sitting_on_a_cloud.svg"
+              src="../build/images/man_sitting_on_a_cloud.svg"
               alt=""
             />
           </div>
@@ -437,13 +455,13 @@
       <!--  elements-->
       <div class="relative">
         <div class="absolute top-30 left-60">
-          <img src="/build/images/star.svg" />
+          <img src="../build/images/star.svg" />
         </div>
         <div class="absolute top-96 right-1/3 lg:top-96 lg:right-1/2">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
         <div class="absolute top-1/2 right-60">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
       </div>
 
@@ -605,19 +623,19 @@
       <!-- elements -->
       <div class="relative">
         <div class="absolute top-30 left-60">
-          <img src="/build/images/star.svg" />
+          <img src="../build/images/star.svg" />
         </div>
         <div class="absolute top-96 right-1/3 lg:top-96 lg:right-1/2">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
         <div class="absolute top-1/2 right-96">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-36 lg:top-28 lg:left-1/3 left-1/2">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-36 right-1/2 lg:top-52 lg:right-96">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
       </div>
 
@@ -651,16 +669,16 @@
             <div class="items-center">
             <img
               class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
-              src="/build/images/2nd_position.svg"
+              src="../build/images/2nd_position.svg"
               alt=""
             />
           </div>
           <div class="items-center">
-            <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="/build/images/1st_position.svg" />
+            <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../build/images/1st_position.svg" />
           </div>
           <div class="items-center">
             <img 
-            class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="/build/images/3rd_position.svg" />
+            class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../build/images/3rd_position.svg" />
           </div>
           </div>
         </div>
@@ -673,19 +691,19 @@
       <!-- elements -->
       <div class="relative">
         <div class="absolute top-30 left-60">
-          <img src="/build/images/star.svg" />
+          <img src="../build/images/star.svg" />
         </div>
         <div class="absolute top-96 right-1/3 lg:top-96 lg:right-1/2">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
         <div class="absolute top-1/2 right-96">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-36 lg:top-28 lg:left-1/3 left-1/2">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-36 right-1/2 lg:top-52 lg:right-96">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
       </div>
 
@@ -707,12 +725,12 @@ companies as its partners and sponsors
 
           <div class="bg-subby border-solid border-2 border-mirage flex flex-1 flex-col mb-10 lg:mb-0 lg:p-7">
             <div class="flex flex-row gap-8 p-3">
-              <div class="border-b-4 border-mirage p-9"><img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="/build/images/liberty_company_logo_white_colour.svg" /></div>
-              <div class="border-b-4 border-l-4 border-mirage flex justify-center items-center py-9"><img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="/build/images/liberty_company_logo_white.svg"/></div>
-              <div class="border-b-4 border-l-4 border-mirage p-9"><img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="/build/images/winwise_log_white_colour_1.svg" /></div>
+              <div class="border-b-4 border-mirage p-9"><img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../build/images/liberty_company_logo_white_colour.svg" /></div>
+              <div class="border-b-4 border-l-4 border-mirage flex justify-center items-center py-9"><img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../build/images/liberty_company_logo_white.svg"/></div>
+              <div class="border-b-4 border-l-4 border-mirage p-9"><img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="../build/images/winwise_log_white_colour_1.svg" /></div>
             </div>
             <div class="flex flex-row gap-8 p-3">
-              <div class="p-9"><img class="md:w-full md:h-full" src="/build/images/wisper_logo_white.svg" /></div>
+              <div class="p-9"><img class="md:w-full md:h-full" src="../build/images/wisper_logo_white.svg" /></div>
               <div class="border-l-4 border-mirage flex justify-center items-center p-3 md:p-9 lg:p-9">
                 <h2
               class="font-clash-display font-sans text-white lg:text-4xl xl font-extrabold"
@@ -739,19 +757,19 @@ companies as its partners and sponsors
       <!-- elements -->
       <div class="relative">
         <div class="absolute top-52 left-10 lg:top-20 lg:left-60">
-          <img src="/build/images/star.svg" />
+          <img src="../build/images/star.svg" />
         </div>
         <div class="absolute bottom-96 right-1/3 lg:top-96 lg:right-1/2">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
         <div class="absolute top-10 right-36 lg:top-1/2 lg:right-96">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-16 lg:top-28 lg:left-1/3 left-1/2">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute bottom-36 right-1/2 lg:top-52 lg:right-1/3">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
       </div>
 
@@ -825,7 +843,7 @@ companies as its partners and sponsors
           <div class="relative flex flex-1 justify-center mb-10 lg:mb-0">
             <img
               class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
-              src="/build/images/man_on_padlock.svg"
+              src="../build/images/man_on_padlock.svg"
               alt=""
             />
             <div class="absolute bottom-1/3 right-1/2 lg:bottom-40 lg:right-48">
@@ -850,16 +868,16 @@ companies as its partners and sponsors
       <!-- elements -->
       <div class="relative">
         <div class="absolute top-52 left-10 lg:top-20 lg:left-60">
-          <img src="/build/images/star.svg" />
+          <img src="../build/images/star.svg" />
         </div>
         <div class="absolute top-10 right-36 lg:top-1/2 lg:right-96">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute top-16 lg:top-28 lg:left-1/3 left-1/2">
-          <img src="/build/images/star_1.svg" />
+          <img src="../build/images/star_1.svg" />
         </div>
         <div class="absolute bottom-36 right-1/2 lg:top-52 lg:right-1/3">
-          <img src="/build/images/star_pu.svg" />
+          <img src="../build/images/star_pu.svg" />
         </div>
       </div>
 
