@@ -853,6 +853,10 @@ video {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -1411,6 +1415,10 @@ video {
     justify-content: flex-end;
   }
 
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
   .lg\:bg-gradient-to-br {
     background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
   }
@@ -1443,5 +1451,10 @@ video {
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
